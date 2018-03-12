@@ -14,22 +14,22 @@
     breaklinks=true,
     bookmarks=true,
 ]{hyperref}
+\usepackage[numbered, open]{bookmark}
 
 
 % Anpassung der Überschriften an Jura
-\usepackage{titlesec}
 \renewcommand{\thechapter}{\Roman{chapter}}
 \renewcommand{\thesection}{§ \arabic{section}}
-
-% Definition der Sätzen und Absätzen
-\newenvironment{absätze} {\begin{enumerate}[(1)]\setlength{\itemsep}{-5pt}}{\end{enumerate}}
-\newenvironment{sätze}   {\begin{enumerate}[(a)]\setlength{\itemsep}{-5pt}}{\end{enumerate}}
 
 % Globale section Nummerierung
 \usepackage{remreset}
 \makeatletter
   \@removefromreset{section}{chapter}
 \makeatother
+
+% Definition der Sätzen und Absätzen
+\newenvironment{absätze} {\begin{enumerate}[(1)]\setlength{\itemsep}{-5pt}}{\end{enumerate}}
+\newenvironment{sätze}   {\begin{enumerate}[(a)]\setlength{\itemsep}{-5pt}}{\end{enumerate}}
 
 % Definitionen: Uni
 \newcommand{\Fach}{Mathematik und Informatik}
@@ -43,8 +43,7 @@
 \newcommand{\VereinsnameKurz}{MInfo e.V.}
 \newcommand{\DatumSatzung}{42. Zeptober 1337}
 
-
-% Definition der Titelseite
+% Definition: Titelseite
 \title{Satzung des \Vereinsname{}}
 \date{Beschlossen auf der Gründungsversammlung am \DatumSatzung{} in \Stadt{}}
 \subtitle{Originalfassung}
