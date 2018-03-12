@@ -1,6 +1,9 @@
-\documentclass[a4paper]{scrreprt}
+\documentclass[
+    a4paper,
+    twoside,
+]{scrreprt}
 
-\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage[a4paper, left=1.5cm, right=1.5cm, top=2cm, bottom=2.5cm]{geometry}
 \usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -8,6 +11,8 @@
 \usepackage[
     colorlinks=true,
     linkcolor=black,
+    breaklinks=true,
+    bookmarks=true,
 ]{hyperref}
 
 
@@ -56,17 +61,18 @@
 \begin{document}
 \pagenumbering{roman}
 
+\clearpage
 \phantomsection
 \addcontentsline{toc}{chapter}{Titelseite}
 \maketitle
 
+\clearpage
 \phantomsection
 \addcontentsline{toc}{chapter}{Inhaltsverzeichnis}
 \tableofcontents
 
-\newpage
+\clearpage
 \pagenumbering{arabic}
-
 \input{kapitel/01_allgemeine_bestimmungen}
 \input{kapitel/02_rechtsverhaeltnisse}
 \input{kapitel/03_mitgliederversammlung}
