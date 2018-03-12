@@ -1,0 +1,76 @@
+\documentclass[a4paper]{scrreprt}
+
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{paralist}
+\usepackage[
+    colorlinks=true,
+    linkcolor=black,
+]{hyperref}
+
+
+% Anpassung der Überschriften an Jura
+\usepackage{titlesec}
+\renewcommand{\thechapter}{\Roman{chapter}}
+\renewcommand{\thesection}{§ \arabic{section}}
+
+% Definition der Sätzen und Absätzen
+\newenvironment{absätze} {\begin{enumerate}[(1)]\setlength{\itemsep}{-5pt}}{\end{enumerate}}
+\newenvironment{sätze}   {\begin{enumerate}[(a)]\setlength{\itemsep}{-5pt}}{\end{enumerate}}
+
+% Globale section Nummerierung
+\usepackage{remreset}
+\makeatletter
+  \@removefromreset{section}{chapter}
+\makeatother
+
+% Definitionen: Uni
+\newcommand{\Fach}{Mathematik und Informatik}
+\newcommand{\Fachbereich}{Fachbereich \Fach{}}
+\newcommand{\Uni}{Philipps-Universität Marburg}
+\newcommand{\Stadt}{Marburg}
+\newcommand{\VerweisFachschaftsrat}{Artikel 32 ff. der Satzung der Student*innenschaft der \Uni{}}
+
+% Definitionen: Verein
+\newcommand{\Vereinsname}{Förderverein der Fachschaft \Fach{} an der \Uni{} e.V.}
+\newcommand{\VereinsnameKurz}{MInfo e.V.}
+\newcommand{\DatumSatzung}{42. Zeptober 1337}
+
+
+% Definition der Titelseite
+\title{Satzung des \Vereinsname{}}
+\date{Beschlossen auf der Gründungsversammlung am \DatumSatzung{} in \Stadt{}}
+\subtitle{Originalfassung}
+
+% Definition der PDF-Metadaten
+\hypersetup{
+	pdftitle={Satzung des \Vereinsname{}},
+	pdfsubject={Satzung},
+    pdfauthor={\Vereinsname{}},
+	pdfkeywords={Satzung, \VereinsnameKurz{}, \Vereinsname{}},
+}
+
+
+\begin{document}
+\pagenumbering{roman}
+
+\phantomsection
+\addcontentsline{toc}{chapter}{Titelseite}
+\maketitle
+
+\phantomsection
+\addcontentsline{toc}{chapter}{Inhaltsverzeichnis}
+\tableofcontents
+
+\newpage
+\pagenumbering{arabic}
+
+\input{kapitel/01_allgemeine_bestimmungen}
+\input{kapitel/02_rechtsverhaeltnisse}
+\input{kapitel/03_mitgliederversammlung}
+\input{kapitel/04_vorstand}
+\input{kapitel/05_verschiedenes}
+
+\end{document}
