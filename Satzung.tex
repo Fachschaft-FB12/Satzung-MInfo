@@ -46,8 +46,9 @@
 
 % Definition: Titelseite
 \title{Satzung des \Vereinsname{}}
-\date{Beschlossen auf der Gründungsversammlung am \DatumSatzung{} in \Stadt{}}
 \subtitle{Originalfassung}
+\author{}
+\date{Beschlossen auf der Gründungsversammlung am \DatumSatzung{} in \Stadt{}}
 
 % Definition der PDF-Metadaten
 \hypersetup{
@@ -57,6 +58,11 @@
 	pdfkeywords={Satzung, \VereinsnameKurz{}, \Vereinsname{}},
 }
 
+\usepackage{draftwatermark}
+\SetWatermarkLightness{0.9}
+\SetWatermarkScale{8}
+\SetWatermarkText{v0.1}
+\subtitle{Entwurf Version 0.1}
 
 \begin{document}
 \pagenumbering{roman}
