@@ -3,19 +3,12 @@
     twoside,
 ]{scrreprt}
 
-\usepackage[a4paper, left=1.5cm, right=1.5cm, top=2cm, bottom=2.5cm]{geometry}
+\usepackage[a4paper, right=15mm, left=15mm, top=15mm, bottom=25mm]{geometry}
 \usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{helvet}
-\usepackage{paralist}
-\usepackage[
-    colorlinks=true,
-    linkcolor=black,
-    breaklinks=true,
-    bookmarks=true,
-]{hyperref}
-\usepackage[numbered, open]{bookmark}
+\usepackage{hyperref}
+\usepackage{libertine}
 
 
 % Anpassung der Überschriften an Jura
@@ -29,6 +22,7 @@
 \makeatother
 
 % Definition der Sätzen und Absätzen
+\usepackage{paralist}
 \newenvironment{absätze} {\begin{enumerate}[(1)]\setlength{\itemsep}{-5pt}}{\end{enumerate}}
 \newenvironment{sätze}   {\begin{enumerate}[(a)]\setlength{\itemsep}{-5pt}}{\end{enumerate}}
 
@@ -42,7 +36,7 @@
 % Definitionen: Verein
 \newcommand{\Vereinsname}{Förderverein der Fachschaft \Fach{} an der \Uni{}}
 \newcommand{\VereinsnameKurz}{MInfo e.V.}
-\newcommand{\DatumSatzung}{25. Juni 2018}
+\newcommand{\DatumSatzung}{29. Juni 2018}
 
 % Definition: Titelseite
 \title{Satzung des \Vereinsname{}}
@@ -59,10 +53,10 @@
 }
 
 \usepackage{draftwatermark}
-\SetWatermarkLightness{0.9}
-\SetWatermarkScale{8}
-\SetWatermarkText{v0.3}
-\subtitle{Entwurf Version 0.3}
+\SetWatermarkLightness{0.95}
+\SetWatermarkScale{2}
+\SetWatermarkText{v0.4}
+\subtitle{Entwurf Version 0.4}
 
 \begin{document}
 \pagenumbering{roman}
